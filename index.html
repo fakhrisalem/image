@@ -9,67 +9,8 @@
         <link rel="stylesheet" href="style.css">
        </head>
 <BODY>
-
-<SCRIPT>
-var currentImage=0;
-var tiomeid;
-//array name for images 
-var imagearray=[];
-imagearray[0]="12.jpg";
-imagearray[1]="11.png";
-imagearray[2]="1.png";
-imagearray[3]="2.png";
-imagearray[4]="3.png";
-imagearray[5]="4.jpg";
-function nextimage(){//function to change image 
-   currentImage++;
-   if(currentImage>5) 
-		currentImage=0;
-document.querySelector("#img").src=imagearray[currentImage];
-}
-function filp(){
-  tiomeid= setInterval(nextimage,500);
- 
-}
-</SCRIPT>
-
-<img src="12.jpg" onmouseover="filp()" 
-onmouseout="clearInterval(tiomeid)"
-id="img" width="20%" height="50%">
+<h1>Image Gallery</h1>
 
 </BODY>
 </HTML>
-<style>
-    body {
-  font-family: Arial, sans-serif;
-  background-color: #1f2b3d;
-  
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
 
-.image-container {
-  padding: 10px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 90%;
-  max-width: 500px;
-  text-align: center;
-}
-
-#img {
-  width:500px;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid #333;
-  display: block;
-}
-
-
-</style>
